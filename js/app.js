@@ -22,13 +22,13 @@ class TamagatchiChar{
 		}
 	}
 	getTired() {
-		if (game.time % 10 === 0) {
+		if (game.time % 5 === 0) {
 			this.rest--;
 		}
 	}
 	goRest() {
 		// switch(i)
-		
+
 		this.rest = 10
 	}
 
