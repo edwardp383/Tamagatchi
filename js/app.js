@@ -62,6 +62,8 @@ const game = {
 	startTime() { setInterval(() => {
 			this.time++
 			this.tama.getHungry()
+			$('#fullness').text(`Fullness:
+				${this.tama.fullness}`)
 			this.tama.getTired()
 			this.tama.getBored()
 			this.tama.getOlder()

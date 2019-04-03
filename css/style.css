@@ -55,6 +55,7 @@
 	height: 60px;
 	border: 1px rgba(150, 150, 150, .5) solid;
 	display: inline-block;
+	font-size: 14px;
 }
 #stats > div > p{
 	margin: 5px;
