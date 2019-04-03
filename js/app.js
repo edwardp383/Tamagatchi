@@ -27,6 +27,8 @@ class TamagatchiChar{
 		}
 	}
 	goRest() {
+		// switch(i)
+		
 		this.rest = 10
 	}
 
@@ -45,7 +47,7 @@ class TamagatchiChar{
 		}
 	}
 	getOlder(){
-		if(game.time % 60 === 0){
+		if(game.time % 10 === 0){
 			this.age++;
 		}
 	}

@@ -1,6 +1,7 @@
 #device {
 	width: 500px;
 	height: 500px;
+	margin: 100px;
 	border: 5px rgba(100, 180, 250, .8) solid;
 	border-radius: 250px 250px 180px 180px;
 	background-color: rgb(255, 160, 160);
