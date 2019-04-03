@@ -29,6 +29,19 @@
 	height:180px;
 	margin: 0 20px;
 	border: 1px rgba(150, 150, 150, .5) solid;
+	text-align: center;
+}
+#tamagotchi > form > input{
+	width: 180px;
+	height: 40px;
+	font-size: 16px;
+}
+#tamagotchi > form > button{
+	width: 60px;
+	height: 40px;
+}
+#tamagotchi > h2 {
+	margin: 10px;
 }
 #tamagotchi > img {
 	width: 258px;

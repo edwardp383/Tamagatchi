@@ -39,6 +39,8 @@ class TamagatchiChar{
 	}
 };
 
+//i understand that i should have flipped placement of the
+// functions in the class to the game
 
 const game = {
 	time: 0,
@@ -67,8 +69,15 @@ const game = {
 
 };
 
-game.hatch("boop")
-game.startTime()
+
+$('form').on('submit', (e) => {
+	e.preventDefault();
+	game.hatch($('#input-name').val())
+	$('form').replaceWith(`<h2>${game.tama.name}<h2>`)
+	game.startTime();
+});
+
+
 
 
 
