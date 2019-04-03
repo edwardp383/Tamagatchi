@@ -8,18 +8,40 @@ class TamagatchiChar{
 		this.age = 0
 	}
 	getHungry(){
-
+		this.hunger--
+	}
+	feed(){
+		this.hunger += 2
 	}
 	getTired(){
-
+		this.sleep--
 	}
-	getBored
+	goToSleep(){
+		this.sleep = 10
+	}
+
+	getBored(){
+		this.fun--
+	}
+	play(){
+		this.fun += 2
+	}
+	
 }
-
-
-
+const tama = new TamagatchiChar("boop");
+console.log(tama)
 const game = {
 	time: 0,
 	gameStarted: false,
+	tama: undefined,
+	hatch(name){
+		
+	},
+	grow(){
+
+	},
+	startTime(){
+
+	}
 
 }
