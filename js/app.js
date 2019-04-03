@@ -65,8 +65,14 @@ const game = {
 			$('#fullness').text(`Fullness:
 				${this.tama.fullness}`)
 			this.tama.getTired()
+			$('#rest').text(`Rest:
+				${this.tama.rest}`)
 			this.tama.getBored()
+			$('#fun').text(`Fun:
+				${this.tama.fun}`)
 			this.tama.getOlder()
+			$('#age').text(`Age:
+				${this.tama.age}`)
 			this.grow()
 			this.die()
 			console.log(this.tama)
