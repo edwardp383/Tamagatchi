@@ -13,14 +13,20 @@ class TamagatchiChar{
 		}
 	}
 	feed() {
-		this.fullness += 2
+		if (this.fullness < 9) {
+			this.fullness += 2;
+		}else if (this.fullness >= 10) {
+			this.fullness = 10;
+		}else{
+			this.fullness++
+		}
 	}
 	getTired() {
 		if (game.time % 10 === 0) {
 			this.rest--;
 		}
 	}
-	goTorest() {
+	goRest() {
 		this.rest = 10
 	}
 
@@ -30,7 +36,13 @@ class TamagatchiChar{
 		}
 	}
 	play() {
-		this.fun += 2
+		if (this.fun < 9) {
+			this.fun += 2;
+		}else if (this.fun >= 10) {
+			this.fun = 10;
+		} else {
+			this.fun++;
+		}
 	}
 	getOlder(){
 		if(game.time % 20 === 0){
@@ -83,14 +95,23 @@ const game = {
 };
 
 
-$('form').on('submit', (e) => {
+$('#form').on('submit', (e) => {
 	e.preventDefault();
 	game.hatch($('#input-name').val())
-	$('form').replaceWith(`<h2>${game.tama.name}<h2>`);
+	$('#form').replaceWith(`<h2>${game.tama.name}<h2>`);
 	$('#tamagotchi > img').replaceWith('<img src="images/tamagotchi baby.gif">');
 	game.startTime();
 });
 
+$('#feed').on('click', () => {
+	game.tama.feed()
+});
+$('#light').on('click', () => {
+	game.tama.goRest()
+});
+$('#play').on('click', () => {
+	game.tama.play()
+});
 
 
 
