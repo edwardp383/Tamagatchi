@@ -1,0 +1,78 @@
+#device {
+	width: 500px;
+	height: 500px;
+	border: 5px rgb(100, 180, 250) solid;
+	border-radius: 250px 250px 180px 180px;
+	background-color: rgba(250, 180, 180, .8);
+}
+#display {
+	width: 300px;
+	height: 300px;
+	margin: 100px 100px;
+	border: 3px rgba(50,50,50, .6) solid;
+	background-color: rgb(230, 230, 230);
+}
+#interact > button{
+	width: 57px;
+	height: 57px;
+	margin: 0 20px;
+	padding: 0;
+}
+#interact > button > img {
+	width: 57px;
+	height: 57px;
+	margin: 0;
+}
+
+#tamagotchi {
+	width: 258px;
+	height:180px;
+	margin: 0 20px;
+	border: 1px rgba(150, 150, 150, .5) solid;
+}
+#tamagotchi > img {
+	width: 258px;
+}
+#stats {
+	height: 60px;
+	width: 300px;
+}
+#stats > div {
+	width: 24.3%;
+	height: 60px;
+	border: 1px rgba(150, 150, 150, .5) solid;
+	display: inline-block;
+}
+#stats > div > p{
+	margin: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
