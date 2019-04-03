@@ -45,7 +45,7 @@ class TamagatchiChar{
 		}
 	}
 	getOlder(){
-		if(game.time % 20 === 0){
+		if(game.time % 60 === 0){
 			this.age++;
 		}
 	}
