@@ -64,14 +64,15 @@ const game = {
 	},
 	grow(){
 		if (game.tama.age == 2) {
-			$('#tamagotchi > img').replaceWith('<img src="images/tamagotchi teen.gif">')
+			$('#tamagotchi > img').replaceWith('<img src="images/tamagotchi teen.gif">');
 		}
 
 	},
 	die(){
 		if (this.tama.fullness <= 0 || this.tama.rest <= 0 || this.tama.fun <= 0) {
+			$('#tamagotchi > h2').replaceWith(`<h2>${this.tama.name} Died!</h2>`);
 			this.tama = undefined;
-			$('#tamagotchi > img').replaceWith('<img src="images/tamagotchi dead.gif">')
+			$('#tamagotchi > img').replaceWith('<img src="images/tamagotchi dead.gif">');
 		}
 		
 	},
@@ -80,19 +81,21 @@ const game = {
 			return
 		}else{
 			this.time++
+
 			this.tama.getHungry()
-			$('#fullness').text(`Fullness:
-				${this.tama.fullness}`)
+			$('#fullness').text(`Fullness: ${this.tama.fullness}`)
+
 			this.tama.getTired()
-			$('#rest').text(`Rest:
-				${this.tama.rest}`)
+			$('#rest').text(`Rest: ${this.tama.rest}`)
+
 			this.tama.getBored()
-			$('#fun').text(`Fun:
-				${this.tama.fun}`)
+			$('#fun').text(`Fun: ${this.tama.fun}`)
+
 			this.tama.getOlder()
-			$('#age').text(`Age:
-				${this.tama.age}`)
+			$('#age').text(`Age: ${this.tama.age}`)
+
 			this.grow()
+
 			this.die()
 			console.log(this.tama)
 		}
@@ -106,19 +109,22 @@ const game = {
 $('#form').on('submit', (e) => {
 	e.preventDefault();
 	game.hatch($('#input-name').val())
-	$('#form').replaceWith(`<h2>${game.tama.name}<h2>`);
+	$('#form').replaceWith(`<h2>${game.tama.name}</h2>`);
 	$('#tamagotchi > img').replaceWith('<img src="images/tamagotchi baby.gif">');
 	game.startTime();
 });
 
 $('#feed').on('click', () => {
 	game.tama.feed()
+	$('#fullness').text(`Fullness: ${game.tama.fullness}`)
 });
 $('#light').on('click', () => {
 	game.tama.goRest()
+	$('#rest').text(`Rest: ${game.tama.rest}`)
 });
 $('#play').on('click', () => {
 	game.tama.play()
+	$('#fun').text(`Fun: ${game.tama.fun}`)
 });
 
 
