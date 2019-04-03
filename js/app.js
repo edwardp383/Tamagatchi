@@ -69,9 +69,16 @@ const game = {
 
 	},
 	die(){
+		if (this.tama.fullness <= 0 || this.tama.rest <= 0 || this.tama.fun <= 0) {
+			this.tama = undefined;
+			$('#tamagotchi > img').replaceWith('<img src="images/tamagotchi dead.gif">')
+		}
 		
 	},
 	startTime() { setInterval(() => {
+		if (this.tama === undefined) {
+			return
+		}else{
 			this.time++
 			this.tama.getHungry()
 			$('#fullness').text(`Fullness:
@@ -88,6 +95,7 @@ const game = {
 			this.grow()
 			this.die()
 			console.log(this.tama)
+		}
 		}, 1000)
 
 	},
